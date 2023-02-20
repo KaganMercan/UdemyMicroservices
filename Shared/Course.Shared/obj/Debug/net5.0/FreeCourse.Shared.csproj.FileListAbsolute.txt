@@ -1,0 +1,12 @@
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\bin\Debug\net5.0\FreeCourse.Shared.deps.json
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\bin\Debug\net5.0\FreeCourse.Shared.dll
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\bin\Debug\net5.0\FreeCourse.Shared.pdb
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.csproj.AssemblyReference.cache
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.AssemblyInfoInputs.cache
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.AssemblyInfo.cs
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.csproj.CoreCompileInputs.cache
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.dll
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\refint\FreeCourse.Shared.dll
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\FreeCourse.Shared.pdb
+D:\kagan\source\repos\UdemyMicroservices\Shared\Course.Shared\obj\Debug\net5.0\ref\FreeCourse.Shared.dll

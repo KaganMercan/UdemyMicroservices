@@ -1,0 +1,6 @@
+/*BU TXT PORT NUMARALARININ KAYDINI TUTAR*/
+Services
+-catalogAPI => 5011
+-basketAPI => 5012
+-fakePaymentAPI => 5013
+-productSearchAPI => 5014

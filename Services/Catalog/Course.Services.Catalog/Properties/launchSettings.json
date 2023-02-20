@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:21727",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    // Catalog API
+    "Course.Services.Catalog": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      // Burası false olursa, projede birden fazla sayıda mikroservis ayağa kalktığında tonlarca tab açılması önlenebilir.
+      "launchBrowser": false,
+      "launchUrl": "swagger",
+      // Port Definition
+      "applicationUrl": "http://localhost:5011",
+      // Environment select => Development Currently
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
