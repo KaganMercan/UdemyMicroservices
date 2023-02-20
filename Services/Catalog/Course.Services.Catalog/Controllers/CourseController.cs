@@ -9,7 +9,7 @@ namespace FreeCourse.Services.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    internal class CourseController : CustomControllerBase
+    public class CourseController : CustomControllerBase
     {
         private readonly ICourseService _courseService;
         public CourseController(ICourseService courseService)
@@ -20,6 +20,8 @@ namespace FreeCourse.Services.Catalog.Controllers
         // IActionResult bir interface olarak, birden fazla data type'ın return edilmesinde kullanılıyor.
         // Örneğin, bir amacımız bir grup dataya erişmek olsun controller aracılığı ile. Bu durumda, grup datanın sayısı
         //  0'dan büyük ise IActionResult type ile status OK olarak dönebilir.
+
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = await _courseService.GetAllAsync();
@@ -38,6 +40,7 @@ namespace FreeCourse.Services.Catalog.Controllers
         // LIST ALL ENDPOINT - With user id.
         // Bu endpoint de aynı şekilde id alıyor. Eğer course/4 gibi bir tip gönderirsek yukarıdaki yapı da call olabilir.
         // bu nedenle buradaki yol değişik olmalı.
+        [HttpGet]
         [Route("/api/[controller]/GetAllByUserId/{userId}")]
         public async Task<IActionResult> GetAllByUserId(string userId)
         {

@@ -24,7 +24,7 @@ namespace FreeCourse.Services.Catalog.Models
         // Collectionlara satır olarak diğer tarafları tanımlayabilirken
         // bu kısmı göz ardı etmesi için ignore'u kullanabiliriz.
         [BsonIgnore]
-        public CategoryDto Category { get; set; }
+        public Category Category { get; set; }
         
     }
 }

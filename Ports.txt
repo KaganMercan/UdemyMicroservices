@@ -1,5 +1,6 @@
 /*BU TXT PORT NUMARALARININ KAYDINI TUTAR*/
 Services
+-MongoDB => 27017
 -catalogAPI => 5011
 -basketAPI => 5012
 -fakePaymentAPI => 5013

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Services
 {
-    internal class CourseService:ICourseService
+    public class CourseService:ICourseService
     {
         private readonly IMongoCollection<Course> _courseCollection;
         private readonly IMongoCollection<Category> _categoryCollection;
@@ -33,7 +33,7 @@ namespace FreeCourse.Services.Catalog.Services
             if (courses.Any())
             {
                 foreach(var course in courses) {
-                    course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
+                    course.Category =  await _categoryCollection.Find<Category>(x => x.Id == course.Id).FirstOrDefaultAsync();          
                 }
             }
             else
@@ -55,8 +55,14 @@ namespace FreeCourse.Services.Catalog.Services
             course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
             return Response<CourseDto>.Success(_mapper.Map<CourseDto>(course), 200);
         }
+
+        public Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId)
+        {
+            return GetAllByUserIdAsync(userId, _categoryCollection);
+        }
+
         // Get all courses by user id. (Bir user'ın birden fazla kursu olabilir.)
-        public async Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId)
+        public async Task<Response<List<CourseDto>>> GetAllByUserIdAsync(string userId, IMongoCollection<Category> _categoryCollection)
         {
             var courses = await _courseCollection.Find<Course>(x => x.Id == userId).ToListAsync();
             if (courses.Any())

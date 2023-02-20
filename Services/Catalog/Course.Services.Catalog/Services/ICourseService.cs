@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Services
 {
-    internal interface ICourseService
+    public interface ICourseService
     {
         // READ
         Task<Response<List<CourseDto>>> GetAllAsync();

@@ -3,13 +3,15 @@ using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Shared.ControllerBases;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Controllers
 {
+    // Main path given with route attribute.
     [Route("api/[controller]")]
     [ApiController]
-    internal class CategoriesController : CustomControllerBase
+    public class CategoriesController : CustomControllerBase
     {
         private readonly ICategoryService _categoryService;
 
@@ -19,6 +21,7 @@ namespace FreeCourse.Services.Catalog.Controllers
         }
 
         // LIST ALL ENDPOINT
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var categories = await _categoryService.GetAllAsync();
@@ -29,8 +32,8 @@ namespace FreeCourse.Services.Catalog.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
-            var categories = await _categoryService.GetByIdAsync(id);
-            return CreateActionResultInstance(categories);
+                var categories = await _categoryService.GetByIdAsync(id);
+                return CreateActionResultInstance(categories);
         }
 
         // CREATE ENDPOINT

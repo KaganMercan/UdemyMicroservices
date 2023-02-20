@@ -30,11 +30,15 @@ namespace FreeCourse.Services.Catalog
         {
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IDatabaseSettings, DatabaseSettings>();
+            
+            
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
 
+            
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
-            services.AddSingleton<DatabaseSettings>(sp =>
+            services.AddSingleton<IDatabaseSettings>(sp =>
             {
                 return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
             });
